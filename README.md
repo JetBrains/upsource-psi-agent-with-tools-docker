@@ -1,4 +1,4 @@
-# upsource-psi-agent-with-tools-docker
+# Upsource PSI Agent with tools
 
 This project contains the Dockerfile and all necessary scripts to build the Docker image of jetbrains/upsource-psi-agent with additional tools used for source code processing.
 This Dockerfile MAY be used as an example for building your own images inherited from jetbrains/upsource-psi-agent with those particular tools required for your projects.
