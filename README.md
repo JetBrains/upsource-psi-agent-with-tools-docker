@@ -9,4 +9,14 @@ Image described by sample Dockerfile is inherited from jetbrains/upsource-psi-ag
 - PHP5 (latest stable)
 - Python 2.7.9 (it is a part of base image openjdk:8) 
 
-Before building the image one should define an actual version of base image jetbrains/upsource-psi-agent in Dockerfile instead of parameter @VERSION@
+For building the image you need to perform the following:
+
+1. Choose version of base [jetbrains/upsource-psi-agent](https://hub.docker.com/r/jetbrains/upsource-psi-agent/tags/) 
+(let it be referred as ${version} below)
+
+2. docker pull jetbrains/upsource-psi-agent:${version}
+
+3. Replace @VERSION@ in Dockerfile with an actual chosen version of base image [jetbrains/upsource-psi-agent](https://hub.docker.com/r/jetbrains/upsource-psi-agent/tags/) 
+
+4. Run the docker build command:
+docker build -t upsource-psi-agent-with-tools
