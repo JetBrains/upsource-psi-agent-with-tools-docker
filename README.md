@@ -7,7 +7,7 @@ Image described by sample Dockerfile is inherited from `jetbrains/upsource-psi-a
 - nodejs (latest stable v6.x), 
 - yarn (latest stable)
 - PHP5 (latest stable)
-- Python 2.7.9 (it is a part of base image openjdk:8) 
+- Python 2.7.9 (it is a part of base image `openjdk:8`) 
 
 For building the image you need to perform the following:
 
