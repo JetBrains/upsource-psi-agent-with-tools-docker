@@ -2,7 +2,7 @@
 
 This project contains a sample Dockerfile that declares extended Upsource PSI Agent docker image with additional tools used for source code processing.
 
-Extended Upsource PSI Agent docker image is inherited from `jetbrains/upsource-psi-agent` and contains the following tools:
+It is inherited from `jetbrains/upsource-psi-agent` and contains the following tools:
 - nodejs (latest stable v6.x), 
 - yarn (latest stable)
 - PHP5 (latest stable)
