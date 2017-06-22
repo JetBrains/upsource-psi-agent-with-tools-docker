@@ -6,7 +6,8 @@ It is inherited from [jetbrains/upsource-psi-agent](https://hub.docker.com/r/jet
 - Node.js (latest LTS v6.x), 
 - Yarn (latest stable)
 - PHP 5 (latest stable)
-- Python 2.7.9 (part of the `openjdk:8` base image) 
+- Python 2.7.9 (part of the `openjdk:8` base image) with pip
+- Python 3 (latest stable) with pip
 
 For building the image you need to perform the following:
 
