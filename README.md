@@ -6,8 +6,9 @@ It is inherited from [jetbrains/upsource-psi-agent](https://hub.docker.com/r/jet
 - Node.js (latest LTS v6.x), 
 - Yarn (latest stable)
 - PHP (latest stable)
-- Python 2.7.9 (part of the `openjdk:8` base image) with pip
+- Python 2.7.9 (part of the `openjdk:8` base image) 
 - Python 3 (latest stable) with pip
+- Android SDK Tools 25.2.5 + SDK platform 26 +  SDK build tools 26
 
 For building the image you need to perform the following:
 
@@ -18,5 +19,11 @@ For building the image you need to perform the following:
 
 3. Replace `@VERSION@` in Dockerfile with the `<version>` of [jetbrains/upsource-psi-agent](https://hub.docker.com/r/jetbrains/upsource-psi-agent/) base image you have chosen.
 
-4. Run the docker build command:
+4. For Upsource instance hosting Android projects, Android SDK might be installed. For that:
+- copy all the files from $ANDROID_HOME/licenses folder located on your developer machine to the folder android-licenses of docker build context (see details on Android SDK licensing scheme: <link-to-the Android site>).
+- add installation lines in Dockerfile for every Android SDK platform and build tools supported in you projects (Android 2.6 is added as an example there)
+  
+   OR remove all Android related lines from Dockerfile if your projects have nothing to do with Android.
+
+5. Run the docker build command:
 `docker build -t upsource-psi-agent-with-tools:<version>`
